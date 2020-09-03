@@ -532,6 +532,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				// Invoke factory processors registered as beans in the context.
 				invokeBeanFactoryPostProcessors(beanFactory);
 
+				/*修改代理对象生成的基本参数 proxyMethod == true / false 决定是否生成 cglib 代理*/
 				// Register bean processors that intercept bean creation.
 				registerBeanPostProcessors(beanFactory);
 

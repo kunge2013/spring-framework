@@ -148,9 +148,13 @@ class ConditionEvaluator {
 				@Nullable Environment environment, @Nullable ResourceLoader resourceLoader) {
 
 			this.registry = registry;
+			/*推断beanFactory 对象，并赋值给当前对象的 beanFactory*/
 			this.beanFactory = deduceBeanFactory(registry);
+			/*推断environment 对象，并赋值给当前对象的 environment*/
 			this.environment = (environment != null ? environment : deduceEnvironment(registry));
+			/*推断resourceLoader 对象，并赋值给当前对象的 resourceLoader*/
 			this.resourceLoader = (resourceLoader != null ? resourceLoader : deduceResourceLoader(registry));
+			/*推断类加载器 对象，并赋值给当前对象的 classLoader*/
 			this.classLoader = deduceClassLoader(resourceLoader, this.beanFactory);
 		}
 
