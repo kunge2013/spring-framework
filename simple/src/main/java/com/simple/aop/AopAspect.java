@@ -22,7 +22,7 @@ public class AopAspect {
 
 	@Before("point()")
 	public void beforeService() {
-		System.out.println("before");
+		System.out.println("beforeService");
 	}
 
 	@After("point()")
@@ -33,12 +33,13 @@ public class AopAspect {
 	@Around("point()")
 	public Object  aroundService(ProceedingJoinPoint proceedingJoinPoint) {
 		Object proceed = null;
+		System.out.println("before proceed ");
 		try {
 			proceed = proceedingJoinPoint.proceed();
 		} catch (Throwable throwable) {
 			throwable.printStackTrace();
 		}
-		System.out.println("afterService");
+		System.out.println("after proceed");
 		return proceed;
 	}
 }
