@@ -40,7 +40,7 @@ public class AspectJAfterAdvice extends AbstractAspectJAdvice
 		super(aspectJBeforeAdviceMethod, pointcut, aif);
 	}
 
-
+	/* aop方法执行后执行方法...Aspectj after methord exec*/
 	@Override
 	public Object invoke(MethodInvocation mi) throws Throwable {
 		try {
