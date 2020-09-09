@@ -1,4 +1,4 @@
-package com.cratos.game.flicker;
+package com.simple.commscollections;
 
 import org.apache.commons.collections4.BidiMap;
 import org.apache.commons.collections4.bidimap.DualTreeBidiMap;

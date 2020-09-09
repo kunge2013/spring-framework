@@ -1,4 +1,4 @@
-package com.cratos.game.flicker;
+package com.simple.commscollections;
 
 /**
  * @author fangkun
