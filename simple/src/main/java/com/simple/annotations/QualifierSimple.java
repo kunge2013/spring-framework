@@ -4,6 +4,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +12,8 @@ import org.springframework.stereotype.Component;
  * @date 2020/9/11 18:02
  * @description:
  */
-@Component
+@Order(0)
+@Component("qualifierSimple")
 public class QualifierSimple implements InitializingBean {
 
 
