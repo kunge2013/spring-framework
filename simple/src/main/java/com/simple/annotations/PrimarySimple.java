@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Order(1)
-//@DependsOn("qualifierSimple")
+@DependsOn("qualifierSimple")
 public class PrimarySimple implements InitializingBean {
 
 	@Autowired
