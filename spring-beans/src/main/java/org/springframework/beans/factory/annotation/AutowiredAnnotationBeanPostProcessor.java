@@ -127,7 +127,7 @@ import org.springframework.util.StringUtils;
  * @see #setAutowiredAnnotationType
  * @see Autowired
  * @see Value
- *  注入相关依赖属性值 比如 @Autowired对象
+ *  @FK  DESC  注入相关依赖属性值 比如 @Autowired对象
  */
 public class AutowiredAnnotationBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter
 		implements MergedBeanDefinitionPostProcessor, PriorityOrdered, BeanFactoryAware {
