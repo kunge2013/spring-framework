@@ -12,7 +12,7 @@ public class AppConfig {
 	public User createBean() {
 		User user = new User();
 		user.setAddress("wuhan");
-		user.setName("zhangsan");
+		//		user.setName("zhangsan");
 		return user;
 	}
 }

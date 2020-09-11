@@ -9,8 +9,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-//		User bean = context.getBean(User.class);
-//		System.out.println(bean.toString());
+		User bean = context.getBean(User.class);
+		System.out.println(bean.toString());
 		ServiceA serviceA = context.getBean(ServiceA.class);
 		//serviceA.print();
 		//AutowireCapableBeanFactory autowireCapableBeanFactory = context.getAutowireCapableBeanFactory();

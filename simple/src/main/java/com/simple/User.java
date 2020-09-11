@@ -1,6 +1,9 @@
 package com.simple;
 
-public class User {
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.config.AbstractFactoryBean;
+
+public class User extends AbstractFactoryBean<Object> {
 
 	private String name;
 	private String address;
@@ -11,7 +14,7 @@ public class User {
 	public String getName() {
 		return name;
 	}
-
+	@Required
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -30,5 +33,15 @@ public class User {
 				"name='" + name + '\'' +
 				", address='" + address + '\'' +
 				'}';
+	}
+
+	@Override
+	public Class<?> getObjectType() {
+		return User.class;
+	}
+
+	@Override
+	protected Object createInstance() throws Exception {
+		return this;
 	}
 }
