@@ -1,4 +1,4 @@
-package com.simple.processor;
+package com.simple.interfaces.processor;
 
 import org.springframework.context.annotation.Configuration;
 

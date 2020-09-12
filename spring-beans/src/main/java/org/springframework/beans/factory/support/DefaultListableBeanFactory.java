@@ -921,7 +921,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 	//---------------------------------------------------------------------
 	// Implementation of BeanDefinitionRegistry interface
 	//---------------------------------------------------------------------
-
+	/*bean 定义注册到容器  实现 BeanPostFactoryProcessor 接口即可. */
 	@Override
 	public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition)
 			throws BeanDefinitionStoreException {

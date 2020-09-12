@@ -1,9 +1,7 @@
-package com.simple.processor;
+package com.simple.interfaces.processor;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -23,10 +21,7 @@ public class SimpleBeanFactoryPostProcessor implements BeanFactoryPostProcessor,
 	@Override
 	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 		if (beanFactory instanceof DefaultListableBeanFactory) {
-//			MutablePropertyValues tsPvs = new MutablePropertyValues();
-//			tsPvs.add("targetBeanName", "person");
 			RootBeanDefinition tsBd = new RootBeanDefinition(ProcessorBean.class);
-//			tsBd.setPropertyValues(tsPvs);
 			((DefaultListableBeanFactory) beanFactory).registerBeanDefinition("processorBean", tsBd);
 		}
 	}

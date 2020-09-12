@@ -181,6 +181,7 @@ public abstract class AbstractBeanDefinition extends BeanMetadataAttributeAccess
 	@Nullable
 	private MutablePropertyValues propertyValues;
 
+	/*调用方法重载相关方法 比如replaceer 相关配置生效后在此处*/
 	private MethodOverrides methodOverrides = new MethodOverrides();
 
 	@Nullable
