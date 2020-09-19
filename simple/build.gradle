@@ -22,6 +22,12 @@ dependencies {
     compile "org.aspectj:aspectjweaver:1.8.2"
     compile "org.apache.commons:commons-collections4:4.4"
     compile "org.apache.kafka:kafka-clients:2.6.0"
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.2'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
+    testCompile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.30'
+    // https://mvnrepository.com/artifact/log4j/log4j
+    compile group: 'log4j', name: 'log4j', version: '1.2.20'
+
     compile(project(":spring-context"))
     compile(project(":spring-aop"))
     testCompile group: 'junit', name: 'junit', version: '4.12'
